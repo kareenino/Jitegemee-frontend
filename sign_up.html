@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Jitegemee School - Home</title>
-        <link rel="stylesheet" href="./css/homepage.css">
+        <link rel="stylesheet" href="./css/form.css">
         <link rel="stylesheet" href="./css/nav_footer.css">
     </head>
     <body>
@@ -20,7 +20,34 @@
             </div>
         </nav>
         <main class="container">
-            <h1>Sign Up</h1>
+            <h1>SIGN UP</h1>
+            <img src="images/signup.jpg" alt="jitegemee-school" style="height: 200px; width: fit-content; display: block; margin: 0 auto;">
+            <form action="#" method="post" class="form-content">
+              <label for="">User Name:</label>
+              <input
+                type="text"
+                name="username"
+                id=""
+                placeholder="enter username"
+              />
+              <label for="">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id=""
+                placeholder="enter email"
+              />
+      
+              <label for="">Password:</label>
+              <input type="text" name="password" id="" placeholder="enter password" />
+              <label for="">Confirm Password:</label>
+              <input type="text" name="confirmPassword" id="" placeholder="confirm password" />
+      
+              <div class="buttons">
+                <button type="submit">SignUp</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+            <p>Already have an account?<a href="login.html">Login</a></p>
         </main>
     </body>
-</html>

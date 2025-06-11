@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Jitegemee School - Home</title>
-        <link rel="stylesheet" href="./css/homepage.css">
         <link rel="stylesheet" href="./css/nav_footer.css">
+        <link rel="stylesheet" href="./css/form.css">
     </head>
     <body>
         <nav class="navbar">
@@ -20,7 +20,25 @@
             </div>
         </nav>
         <main class="container">
-            <h1>Login</h1>
+            <h1>LOGIN</h1>
+            <img src="images/login.png" alt="jitegemee-school" style="height: 200px; width: fit-content; display: block; margin: 0 auto;">
+            <form action="#" method="post" class="form-content">
+              <label for="">User Name:</label>
+              <input
+                type="text"
+                name="username"
+                id=""
+                placeholder="enter user name"
+              />
+      
+              <label for="">Password:</label>
+              <input type="text" name="contact" id="" placeholder="enter password" />
+      
+              <div class="buttons">
+                <button type="submit">Login</button>
+                <button type="reset">Reset</button>
+              </div>
+            </form>
+            <p>Don't have an account? <a href="sign_up.html">Sign Up</a></p>
         </main>
     </body>
-</html>
