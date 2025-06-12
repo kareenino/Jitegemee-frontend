@@ -17,18 +17,34 @@
                 <a href="contact_us.html">Contact Us</a>
                 <a href="login.html">Login</a>
                 <a href="sign_up.html">Sign-up</a>
+                <a href="courses.html">Courses</a>
             </div>
         </nav>
         <main class="container">
             <h1>SIGN UP</h1>
             <img src="images/signup.jpg" alt="jitegemee-school" style="height: 200px; width: fit-content; display: block; margin: 0 auto;">
             <form action="#" method="post" class="form-content">
+              <label for="">First Name:</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstNameId"
+                placeholder="enter first name"
+              />
+              <label for="">Last Name:</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastNameId"
+                placeholder="enter lastname"
+              />
               <label for="">User Name:</label>
               <input
                 type="text"
-                name="username"
-                id=""
+                name="userName"
+                id="userNameId"
                 placeholder="enter username"
+                readonly
               />
               <label for="">Email:</label>
               <input
@@ -50,4 +66,23 @@
             </form>
             <p>Already have an account?<a href="login.html">Login</a></p>
         </main>
+        <script>
+            function updateUserName(){
+
+            let fName = document.getElementById("firstNameId").value.trim();
+            let lName = document.getElementById("lastNameId").value.trim();
+            let uName = document.getElementById("userNameId").value.trim();
+
+            uName = `${fName} ${lName}`.trim();
+            console.log(uName);
+            document.getElementById('userNameId').value=uName;
+            
+            }
+
+            document.getElementById("firstNameId").addEventListener('input', updateUserName);
+            document.getElementById("lastNameId").addEventListener('input', updateUserName);
+
+            updateUserName();
+        </script>
     </body>
+</html>

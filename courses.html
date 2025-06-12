@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/nav_footer.css" />
+</head>
+<body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="HomePage.html" style="color: cyan">JITEGEMEE</a>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="about_us.html">About Us</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="login.html">Login</a>
+        <a href="sign_up.html">Sign Up</a>
+        <a href="courses.html">Courses</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <h1 id="titleId">List of Courses</h1>
+
+      <form action="#" method="post" class="form-content">
+        <label for="">BBIT:</label>
+        <input
+          type="text"
+          name="bbit"
+          id="bbitId"
+          placeholder="0"
+          required
+        />
+        <label for="">Computer Science:</label>
+        <input
+          type="text"
+          name="computerScience"
+          id="computerScienceId"
+          placeholder="0"
+          required
+        />
+        <label for="">BCOM:</label>
+        <input
+          type="text"
+          name="bcom"
+          id="bcomId"
+          placeholder="0"
+          required          
+        />
+        <p>Total Fees</p>
+        <h1 id=""></h1>
+        <input
+          type="text"
+          id="totalFeesId"
+          placeholder="0" 
+          hidden  
+        />
+
+      </form>
+    </main> 
+    
+    <script>
+        
+        let title = document.getElementById('titleId');
+        title.style.color = "black";
+        title.style.fontSize = '48px';
+    
+        function computeFees() {
+
+        let bbit = parseInt(document.getElementById('bbitId').value.trim()) || 0;
+        let cs = parseInt(document.getElementById('computerScienceId').value.trim()) || 0;
+        let bcom = parseInt(document.getElementById('bcomId').value.trim()) || 0;
+
+        let feeTotal = bbit + cs + bcom;
+
+        console.log(feeTotal);
+                
+
+        let totalFee = document.getElementById('totalFeesId');
+        totalFee.style.display = 'block';
+        totalFee.value = feeTotal;
+        totalFee.style.color = "white";
+        totalFee.style.background = "#004080";
+        totalFee.style.fontSize = '48px';
+        totalFee.style.textAlign = 'center';
+        totalFee.style.fontWeight = 'bold';
+
+        }
+        
+        document.getElementById('bbitId').addEventListener('input', computeFees);
+        document.getElementById('computerScienceId').addEventListener('input', computeFees);
+        document.getElementById('bcomId').addEventListener('input', computeFees);
+        computeFees();
+
+    </script>
+    
+</body>
+</html>
